@@ -3,7 +3,7 @@ __author__ = 'penghao'
 import sys
 from textblob import TextBlob
 
-f = open("test.txt","r")
+f = open("workfile.txt","r")
 a = f.readlines()
 # input comes from STDIN (standard input)
 totallist=[]
@@ -32,7 +32,7 @@ for line in a:
 for tweet in totallist:
     #follower count
     if tweet[0][0] == '{"created_at"':
-        print(tweet[0][1],tweet[1][1]+tweet[1][2],tweet[2][1])
+        print(tweet[0][1],tweet[1][1]+tweet[1][2],int(tweet[2][1]))
         #print(tweet[1])
     blob = TextBlob(tweet[1][2])
     #for sentence in blob.sentences:
