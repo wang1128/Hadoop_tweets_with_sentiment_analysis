@@ -3,14 +3,14 @@ import sys
 from textblob import TextBlob
 import nltk
 #author: Penghao Wang
-# input comes from STDIN (standard input)
+
 totallist=[]
 count=0
 for line in sys.stdin:
-    # remove leading and trailing whitespace
+
     try:
         line = line.strip()
-    # split the line into words
+
         words = line.split(',')
 
         list=[]
@@ -26,7 +26,7 @@ for line in sys.stdin:
     except ValueError:
         continue
 for tweet in totallist:
-    #follower count
+
     try:
         if tweet[0][0] == '{"created_at"' and len(tweet[1])>=4:
             t=tweet[1][1]+tweet[1][2]+tweet[1][3]
