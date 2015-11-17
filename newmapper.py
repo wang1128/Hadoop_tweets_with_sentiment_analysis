@@ -19,7 +19,7 @@ for line in sys.stdin:
             if word[0] == '{"created_at"':
                 count=count+1
                 list.append(word)
-            if word[0] == '"text"'  or word[0] == '"followers_count"'  or word[0] == '"retweet_count"' or word[0] == '"favorite_count"':
+            if word[0] == '"text"'  or word[0] == '"followers_count"' or word[0] == '"location"' or word[0] == '"retweet_count"' or word[0] == '"favorite_count"':
                 list.append(word)
         if(list!=[]):
             totallist.append(list)
